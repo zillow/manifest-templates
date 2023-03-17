@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: EventBus
+metadata:
+  name: default
+  labels:
+    zodiac.zillowgroup.net/product: &zodiac_product eventing
+spec:
+  nats:
+    native:
+      metadata:
+        labels:
+          zodiac.zillowgroup.net/product: *zodiac_product
+      serviceAccountName: default-editor
+      containerTemplate:
+        resources:
+          requests:
+            cpu: 0.5
+            memory: 300Mi
+          limits:
+            memory: 300Mi
