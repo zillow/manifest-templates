@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Sensor
+metadata:
+  name: ignored
+spec:
+  template:
+    metadata:
+      labels: 
+        zodiac.zillowgroup.net/product: eventing
