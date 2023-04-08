@@ -4,12 +4,3 @@ kind: Kustomization
 # add additional template resources here
 resources:
 - eventbus.yaml
-
-# patch Sensor and EventSource with webhook label
-patches:
-- path: sensor-patch.yaml
-  target:
-    kind: Sensor
-- path: eventsource-patch.yaml
-  target:
-    kind: EventSource
